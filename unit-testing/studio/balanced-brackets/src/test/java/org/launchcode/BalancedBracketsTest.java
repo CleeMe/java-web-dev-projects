@@ -110,7 +110,24 @@ public void MixedUnbalancedBracketsAmongOtherCharacters() {
     assertFalse(result, message);
 }
 
+// EDGE CCASES
 
+//    TODO: TEST STRING WITH ONLY CHARACTERS OTHER THAN BRACKETS - "LaunchCode"
+@Test
+public void StringCharactersOnlyNoBrackets() {
+    String message = "a string of characters without brackets returns true";
+    String testData = "LaunchCode";
+    boolean result = BalancedBrackets.hasBalancedBrackets(testData);
+    assertTrue(result, message);
+}
+//    TODO: TEST EMPTY STRING - ""
+@Test
+public void emptyString() {
+    String message = "an empty string returns true";
+    String testData = "";
+    boolean result = BalancedBrackets.hasBalancedBrackets(testData);
+    assertTrue(result, message);
+}
 
     @Test
     public void emptyTest() {
