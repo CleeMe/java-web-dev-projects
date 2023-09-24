@@ -92,8 +92,23 @@ class BalancedBracketsTest {
         assertFalse(result, message);
     }
 
+// TODO: TEST UNBALANCED BRACKETS AMONG OTHER CHARACTERS - "Launch]Code["
+@Test
+public void unbalancedBracketsAmongOtherCharacters() {
+    String message = "single opening bracket returns false";
+    String testData = "Launch]Code[";
+    boolean result = BalancedBrackets.hasBalancedBrackets(testData);
+    assertFalse(result, message);
+}
 
-
+// TODO: TEST A SERIES OF MIXED, UNBALANCED BRACKETS - "[[]][]["
+@Test
+public void MixedUnbalancedBracketsAmongOtherCharacters() {
+    String message = "mixed balanced brackets among other characters returns false";
+    String testData = "[[]][][";
+    boolean result = BalancedBrackets.hasBalancedBrackets(testData);
+    assertFalse(result, message);
+}
 
 
 
